@@ -11,7 +11,7 @@ router.get("/quote", async(request, response) => {
         return response.status(200).send(quote.data[0].content);
     }catch(error) {
         console.log(error);
-        return response.status(500).json({error});
+        return response.status(500).json(error);
     }
 
 });
